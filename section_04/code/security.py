@@ -1,5 +1,5 @@
 from werkzeug.security import safe_str_cmp  # https://werkzeug.palletsprojects.com/en/1.0.x/installation/#install-werkzeug
-from user imoprt User
+from user import User
 
 
 users = [
@@ -19,7 +19,7 @@ users = [
 #     }
 # }
 
-username_mapping = {u.username: u for in users}
+username_mapping = {u.username: u for u in users}
 
 # userid_mapping = {
 #     1: {
@@ -40,6 +40,6 @@ def authenticate(username, password):
         return user
 
 
-def identify(payload):
+def identity(payload):
     user_id = payload['identity']
     return userid_mapping.get(user_id, None)
