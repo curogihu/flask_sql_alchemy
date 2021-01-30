@@ -5,13 +5,28 @@ from flask_restful import Resource, Api
 app = Flask(__name__)
 api = Api(app)
 
+items = []
 
-class Student(Resource):
+
+class Item(Resource):
     def get(self, name):
-        return {'student': name}
+        # return {'item': name}
+        for item in items:
+            if item['name'] == name:
+                return item
 
-# http://127.0.0.1/student/Rolf
-api.add_resource(Student, '/student/<string:name>')
+        return {'item': None}, 404
+
+    
+    def post(self, name):
+        item = {'name': name, 'price': 12.00}
+        items.append(item)
+
+        return item, 201
+
+
+
+api.add_resource(Item, '/item/<string:name>')
 
 app.run(port=5000)
 
