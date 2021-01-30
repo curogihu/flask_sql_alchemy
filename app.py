@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
 
 app = Flask(__name__)
@@ -15,9 +15,10 @@ stores = [
 ]
 
 
+
 @app.route('/')     # such as http://127.0.0.1:5000/
 def home():
-    return 'Hello, world!'
+    return render_template('index.html')
 
 # POST    /store data: {name:}
 @app.route('/store', methods=['POST'])

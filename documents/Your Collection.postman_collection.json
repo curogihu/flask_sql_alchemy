@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "ec2d75bd-140e-4ff7-9ecf-cd62539c5fb8",
+		"name": "Your Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Section 3",
+			"item": [
+				{
+					"name": "/store/<name>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/store/My Wonderful store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store",
+								"My Wonderful store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>/item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/store/My Wonderful store/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store",
+								"My Wonderful store",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>/item Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/store/My Wonderful store/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store",
+								"My Wonderful store",
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Another store\"\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/store",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/<name>/item",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Another item\",\r\n    \"price\": 10.99\r\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/store/My Wonderful store/item",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"store",
+								"My Wonderful store",
+								"item"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
